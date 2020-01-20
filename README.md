@@ -9,6 +9,7 @@ Fork the project on github and git clone your fork, e.g.:
 This is our data:
 ![Train test split](/images/data_pic.png)
 
-    www.fiverr.com/coderjs
+
+www.fiverr.com/coderjs
     
 
