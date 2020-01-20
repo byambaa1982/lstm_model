@@ -36,7 +36,7 @@ Let's first extract only the 'buildDate' from the dataset.
     uni_data.index = df['buildDate']
     uni_data.head() 
 
-Let's observe how this data looks across time.
+Let's observe how this data looks across time. 
 
     uni_data.plot(subplots=True)
     
