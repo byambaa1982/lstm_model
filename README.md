@@ -111,7 +111,51 @@ This is what the univariate_data function returns.
 	 Target to predict
 	1.0628544436459573
 
+Now that the data has been created, let's take a look at a single example. The information given to the network is given in blue, and it must predict the value at the red cross.
+	
+	def create_time_steps(length):
+  		return list(range(-length, 0))
 
+  	def show_plot(plot_data, delta, title):
+	  labels = ['History', 'True Future', 'Model Prediction']
+	  marker = ['.-', 'rx', 'go']
+	  time_steps = create_time_steps(plot_data[0].shape[0])
+	  if delta:
+	    future = delta
+	  else:
+	    future = 0
+
+	  plt.title(title)
+	  for i, x in enumerate(plot_data):
+	    if i:
+	      plt.plot(future, plot_data[i], marker[i], markersize=10,
+	               label=labels[i])
+	    else:
+	      plt.plot(time_steps, plot_data[i].flatten(), marker[i], label=labels[i])
+	  plt.legend()
+	  plt.xlim([time_steps[0], (future+5)*2])
+	  plt.xlabel('Time-Step')
+	  return plt
+  
+
+	show_plot([x_train_uni[0], y_train_uni[0]], 0, 'Sample Example')
+
+![sample example](/images/sample_example.png)	
+
+### Baseline
+
+Before proceeding to train a model, let's first set a simple baseline. Given an input point, the baseline method looks at all the history and predicts the next point to be the average of the last 20 observations.
+
+
+	def baseline(history):
+  		return np.mean(history)
+
+  	show_plot([x_train_uni[0], y_train_uni[0], baseline(x_train_uni[0])], 0,
+           'Baseline Prediction Example')
+
+![sample example](/images/baseline.png)	  
+
+        
 www.fiverr.com/coderjs
     
 
