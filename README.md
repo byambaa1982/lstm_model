@@ -40,6 +40,8 @@ Let's observe how this data looks across time.
 
     uni_data.plot(subplots=True)
     
+
+![Train test split](/images/time_ser.png)
     
 
 
