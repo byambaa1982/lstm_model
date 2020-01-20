@@ -1,5 +1,7 @@
 # LSTM Model
 
+ALl code is in lstm_model/brunobuger.ipynb directory. 
+
 ### What is LSTM?
 
 LSTM stands for Long short-term-memory, meaning the short-term-memory is maintained in the LSTM cell state over long time steps. LSTM achieves this by overcoming the vanishing gradient problem that is typical of simpleRNN architecture.
