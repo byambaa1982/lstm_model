@@ -1,6 +1,8 @@
 # LSTM Model
 
-ALl code is in lstm_model/brunobuger.ipynb directory. 
+ALl code is here:
+
+https://github.com/byambaa1982/lstm_model/blob/master/brunobuger.ipynb
 
 ### What is LSTM?
 
