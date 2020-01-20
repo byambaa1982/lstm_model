@@ -33,9 +33,9 @@ First, you will train a model using only a single feature (Build Date), and use 
 Let's first extract only the 'buildDate' from the dataset.
 
 
-uni_data = df['trend2min']
-uni_data.index = df['buildDate']
-uni_data.head() 
+   uni_data = df['trend2min']
+   uni_data.index = df['buildDate']
+   uni_data.head() 
 
 Let's observe how this data looks across time.
     uni_data.plot(subplots=True)
